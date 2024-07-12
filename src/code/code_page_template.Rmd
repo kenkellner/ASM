@@ -1,0 +1,16 @@
+---
+title: "`r params$page_title`"
+params:
+  page_title: ""
+  code_file: ""
+output:
+  html_document:
+    css: ../style.css
+---
+
+[Download code](`r params$code_file`)
+
+
+```{r params$code_file, file= params$code_file, eval=FALSE}
+```
+

@@ -1,0 +1,695 @@
+---
+title: Table of Contents
+output:
+  html_document:
+    css: style.css
+---
+
+# 1. Introduction
+
+1.1 Statistical models and why you need them
+
+1.2 Why linear statistical models?
+
+1.3 Why go beyond the linear model?
+
+1.4 Random effects and why you need them
+
+1.5 Why do you need both Bayesian and non-Bayesian statistical inference?
+
+1.6 More reasons for why you should really understand maximum likelihood
+
+1.7 The data simulation/model fitting dualism
+
+1.8 The 'experimental approach' to statistics
+
+1.9 The first principle of modeling: Start simple!
+
+1.10 Overview of the ASM book and additional resources
+
+1.11 How to use the ASM book for self-study and in courses
+
+1.12 Summary and outlook
+
+
+# 2. Introduction to statistical inference
+
+2.1 Probability as the basis for statistical inference
+
+2.2 Random variables and their description by probability distributions
+
+2.2.1 Discrete and continuous random variables
+
+2.2.2 Description of random variables by probability distributions
+
+2.2.3 Location and spread of a rand. variable, and what "modeling a parameter" means
+
+2.2.4 Short summary on random variables and probability distributions
+
+2.3 Statistical models and their usages
+
+2.4 The likelihood function
+
+2.5 Classical inference by max. likelihood and its application to a single-parameter model
+
+2.5.1 Introduction to maximum likelihood
+
+2.5.2 Confidence intervals by inversion of the likelihood ratio test
+
+2.5.3 Stand. errors and conf. intervals based on approximate normality of the MLEs
+
+2.5.4 Obtaining standard errors and confidence intervals using the bootstrap
+
+2.5.5 A short summary on maximum likelihood estimation
+
+2.6 Maximum likelihood estimation in a two-parameter model
+
+2.7 Bayesian inference using posterior distributions
+
+2.7.1 Probability as a general measure of uncertainty, or of imperfect knowledge
+
+2.7.2 The posterior distribution as a fundamental target of inference
+
+2.7.3 Prior distributions
+
+2.8 Bayesian computation by Markov chain Monte Carlo (MCMC)
+
+2.8.1 Monte Carlo integration
+
+2.8.2 MCMC for the Swiss bee-eaters
+
+2.8.3 A practical in MCMC for the bee-eaters with function demoMCMC()
+
+2.9 So should you now be a Bayesian or a frequentist?
+
+2.10 Summary and outlook
+
+
+# 3. Linear regression models and their extensions to generalized linear, hierarchical and integrated models
+
+3.1 Introduction
+
+3.2 Statistical distributions for the random variables in our model
+
+3.2.1 Normal distribution
+
+3.2.2 Uniform distribution
+
+3.2.3 Binomial distribution: The “coin-flip distribution”
+
+3.2.4 Poisson distribution
+
+3.2.5 Summary remarks on statistical distributions
+
+3.3 Link functions to model parameters on a transformed scale
+
+3.4 Linear modeling of covariate effects
+
+3.4.1 The "model of the mean"
+
+3.4.2 Comparison of two groups
+
+3.4.3 Simple linear regression: modeling the effect of one continuous covariate
+
+3.4.4 Modeling the effects of one categorical covariate, or factor
+
+3.4.5 Modeling the effects of two factors
+
+3.4.6 Modeling the effects of a factor and a continuous covariate
+
+3.5 Brief overview of linear, generalized linear, (generalized) linear mixed, hierarchical and integrated models
+
+3.6 Summary and outlook
+
+
+# 4. Introduction to general-purpose model-fitting engines and the model of the mean
+
+4.1 Introduction
+
+4.2 Data generation
+
+4.3 Analysis using a canned function in R
+
+4.4 JAGS
+
+4.4.1 Introduction to JAGS
+
+4.4.2 Fit the model with JAGS
+
+4.5 NIMBLE
+
+4.5.1 Introduction to NIMBLE
+
+4.5.2 Fit the model with NIMBLE
+
+4.6 Stan
+
+4.6.1 Introduction to Stan
+
+4.6.2 Fit the model with Stan
+
+4.7 Maximum likelihood in R
+
+4.7.1 Introduction to maximum likelihood in R
+
+4.7.2 Fit the model using maximum likelilhood in R
+
+4.8 Maximum likelihood using Template Model Builder (TMB)
+
+4.8.1 Introduction to TMB
+
+4.8.2 Fit the model with TMB
+
+4.9 Comparison of engines and concluding remarks
+
+
+# 5. Simple linear regression with Normal errors
+
+5.1 Introduction
+
+5.2 Data generation
+
+5.3 Likelihood analysis using canned functions in R
+
+5.4 Bayesian analysis with JAGS
+
+5.4.1 Fitting the model
+
+5.4.3 Forming predictions
+
+5.4.4 Interpretation of confidence vs. credible intervals
+
+5.5 Bayesian analysis with Stan
+
+5.6 Do-it-yourself MLEs
+
+5.7 Likelihood analysis with TMB
+
+5.8 Comparison of the engines
+
+5.9 Summary and outlook
+
+
+# 6. Comparison of two groups
+
+6.1 Introduction
+
+6.2 Comparing two groups with equal variances
+
+6.2.1 Data generation
+
+6.2.2 Likelihood analysis with canned functions in R
+
+6.2.3 Bayesian analysis with JAGS
+
+6.2.4 Bayesian analysis with Stan
+
+6.2.5 Do-it-yourself MLEs
+
+6.2.6 Likelihood analysis with TMB
+
+6.2.7 Comparison of the engines
+
+6.3 Comparing two groups with unequal variances
+
+6.3.1 Data generation
+
+6.3.2 Frequentist analysis using canned functions in R
+
+6.3.3 Bayesian analysis with JAGS
+
+6.3.4 Bayesian analysis with Stan
+
+6.3.5 Do-it-yourself MLEs
+
+6.3.6 Likelihood analysis with TMB
+
+6.3.7 Comparison of the engines
+
+6.4 Summary and outlook
+
+
+# 7. Comparisons among multiple groups
+
+7.1 Introduction: A first encounter with fixed and random effects
+
+7.2 Fixed effects of categorical covariates
+
+7.2.1 Data generation
+
+7.2.2 Likelihood analysis using canned functions in R
+
+7.2.3 Bayesian analysis with JAGS
+
+7.2.4 Bayesian analysis with Stan
+
+7.2.5 Do-it-yourself MLEs
+
+7.2.6 Likelihood analysis with TMB
+
+7.2.7 Comparison of the engines
+
+7.3 Random effects of categorical covariates
+
+7.3.1 Data generation
+
+7.3.2 Likelihood analysis using canned functions in R
+
+7.3.3 Bayesian analysis with JAGS ... and a quick fixed-random comparison
+
+7.3.4 Bayesian analysis with Stan
+
+7.3.5 Do-it-yourself MLEs
+
+7.3.6 Likelihood analysis with TMB
+
+7.3.7 Comparison of the engines
+
+7.4 Summary and outlook
+
+
+# 8. Comparisons in two classifications or with two categorical covariates
+
+8.1 Introduction: Main and interaction effects
+
+8.2 Data generation
+
+8.3 Likelihood analysis using canned functions in R
+
+8.4 An aside: Using simulation to assess bias and precision of an estimator ...
+and to see what a standard error is
+
+8.5 Bayesian analysis with JAGS
+
+8.5.1 Main-effects model
+
+8.5.2 Interaction-effects model
+
+8.5.3 Forming predictions
+
+8.6 Bayesian analysis with Stan
+
+8.6.1 Main-effects model
+
+8.6.2 Interaction-effects model
+
+8.7 Do-it-yourself MLEs
+
+8.7.1 Main-effects model
+
+8.7.2 Interaction-effects model
+
+8.8 Likelihood analysis with TMB
+
+8.8.1 Main-effects model
+
+8.8.2 Interaction-effects model
+
+8.9 Comparison of the engines
+
+8.10 Summary and outlook
+
+
+# 9. General linear model with continuous and categorical explanatory variables
+
+9.1 Introduction
+
+9.2 Data generation
+
+9.3 Likelihood analysis with canned functions in R
+
+9.4 Bayesian analysis with JAGS
+
+9.5 Bayesian analysis with Stan
+
+9.6 Do-it-yourself MLEs
+
+9.7 Likelihood analysis with TMB
+
+9.8 Comparison of the engines
+
+9.9 Summary
+
+
+# 10. Linear mixed-effects model
+
+10.1 Introduction: Mixed effects
+
+10.2 Data generation
+
+10.3 Analysis under a random-intercepts model
+
+10.3.1 ML and REML estimates using canned functions in R
+
+10.3.2 Bayesian analysis with JAGS
+
+10.3.3 Bayesian analysis with Stan
+
+10.3.4 Do-it-yourself MLEs
+
+10.3.5 Likelihood analysis with TMB
+
+10.3.6 Comparison of the engines
+
+10.4 Analysis under a random-coefficients model without correlation between
+intercept and slope
+
+10.4.1 REML and ML estimates using canned functions in R
+
+10.4.2 Bayesian analysis with JAGS
+
+10.4.3 Bayesian analysis with Stan
+
+10.4.4 Do-it-yourself MLEs
+
+10.4.5 Likelihood analysis with TMB
+
+10.4.6 Comparison of the engines
+
+10.5 The random-coefficients model with correlation between intercept and slope
+
+10.5.1 Introduction
+
+10.5.2 Data generation
+
+10.5.3 REML and ML estimates using canned functions in R
+
+10.5.4. Bayesian analysis with JAGS
+
+10.5.5 Bayesian analysis with Stan
+
+10.5.6 Do-it-yourself MLEs
+
+10.5.7 Likelihood analysis with TMB
+
+10.5.8 Comparison of the the engines
+
+10.6 Summary and outlook
+
+
+# 11. Introduction to the Generalized linear model (GLM): Comparing two groups
+in a Poisson regression
+
+11.1 Introduction
+
+11.2 An important but often forgotten issue with count data
+
+11.3 Data generation
+
+11.4 Likelihood analysis with canned functions in R
+
+11.5 Bayesian analysis with JAGS
+
+11.6 Bayesian analysis with Stan
+
+11.7 Do-it-yourself MLEs
+
+11.8 Likelihood analysis with TMB
+
+11.9 Comparison of the engines
+
+11.10 Summary and outlook
+
+
+# 12. Overdispersion, zero-inflation and offsets in a GLM
+
+12.1 Introduction
+
+12.2 Overdispersion
+
+12.2.1 Data generation
+
+12.2.2 Likelihood analysis with canned functions in R
+
+12.2.3 Bayesian analysis with JAGS
+
+12.2.4 Bayesian analysis with Stan
+
+12.2.5 Do-it-yourself MLEs
+
+12.2.6 Likelihood analysis with TMB
+
+12.2.7 Comparison of the engines
+
+12.3 Zero-inflation
+
+12.3.1 Data generation
+
+12.3.2 Likelihood analysis with canned functions in R
+
+12.3.3 Bayesian analysis with JAGS
+
+12.3.4 Bayesian analysis with Stan
+
+12.3.5 Do-it-yourself MLEs
+
+12.3.6 Likelihood analysis with TMB
+
+12.3.7 Comparison of the engines
+
+12.4 Offsets
+
+12.4.1 Data generation
+
+12.4.2 Likelihood analysis with canned functions in R
+
+12.4.3 Bayesian analysis with JAGS
+
+12.4.4 Bayesian analysis with Stan
+
+12.4.5 Do-it-yourself MLEs
+
+12.4.6 Likelihood analysis with TMB
+
+12.4.7 Comparison of the engines
+
+12.5 Summary and outlook
+
+
+# 13. Poisson regression with both continuous and categorical explanatory variables
+
+13.1 Introduction
+
+13.2 Data generation
+
+13.3 Likelihood analysis with canned functions in R
+
+13.4 Bayesian analysis with JAGS
+
+13.4.1 Fitting the model
+
+13.4.2 Forming predictions
+
+13.5 Bayesian analysis with Stan
+
+13.6 Do-it-yourself MLEs
+
+13.7 Likelihood analysis with TMB
+
+13.8 Comparison of the engines
+
+13.9 Summary and outlook
+
+
+# 14. Poisson mixed-effects model or Poisson GLMM
+
+14.1. Introduction
+
+14.2 Data generation
+
+14.3 Likelihood analysis with canned functions in R
+
+14.4 Bayesian analysis with JAGS
+
+14.5 Bayesian analysis with Stan
+
+14.6 Do-it-yourself MLEs
+
+14.7 Likelihood analysis with TMB
+
+14.8 Comparison of the engines
+
+14.9 Summary and outlook
+
+
+# 15. Comparing two groups in a Binomial regression
+
+15.1 Introduction
+
+15.2 Data generation
+
+15.3 Likelihood analysis with canned functions in R
+
+15.4 Bayesian analysis with JAGS
+
+15.5 Bayesian analysis with Stan
+
+15.6 Do-it-yourself MLEs
+
+15.7 Likelihood analysis with TMB
+
+15.8 Comparison of the engines
+
+15.9 Summary and outlook
+
+
+# 16. Binomial GLM with both continuous and categorical explanatory variables
+
+16.1 Introduction
+
+16.2 Data generation
+
+16.3 Likelihood analysis with canned functions in R
+
+16.4 Bayesian analysis with JAGS
+
+16.5 Bayesian analysis with Stan
+
+16.6 Do-it-yourself MLEs
+
+16.7 Likelihood analysis with TMB
+
+16.8 Comparison of the engines
+
+16.9 Summary and outlook
+
+
+# 17. Binomial mixed-effects model or Binomial GLMM
+
+17.1 Introduction
+
+17.2 Data generation
+
+17.3 Likelihood analysis with canned functions in R
+
+17.4 Bayesian analysis with JAGS
+
+17.5 Bayesian analysis with Stan
+
+17.6 Do-it-yourself MLEs
+
+17.7 Likelihood analysis with TMB
+
+17.8 Comparison of the engines
+
+17.9 Summary and outlook
+
+
+# 18. Model building, model checking and model selection
+
+18.1 Introduction
+
+18.2 Why do we build a statistical model ?
+
+18.3 Tickly rattlesnakes
+
+18.4 How do we build a statistical model ?
+
+18.4.1 Model expansion and iterating on a single model
+
+18.4.2 Causal, path and structural equation models
+
+18.4.3 Performance optimization in a predictive model
+
+18.5 Model checking and goodness-of-fit testing
+
+18.5.1 Traditional residual diagnostics
+
+18.5.2 Bootstrapped and posterior predictive distributions
+
+18.5.3 Cross-validation for goodness-of-fit assessments
+
+18.5.4 Identifying and correcting for overdispersion
+
+18.5.5 Measures of the absolute fit of a model
+
+18.5.6 Parameter identifiability and robustness to assumptions
+
+18.6 Model selection
+
+18.6.1 When to do model selection ... and when not
+
+18.6.1 Measuring the predictive performance of a model
+
+18.6.2 Fully external model validation using "out-of-sample" data
+
+18.6.3 Approximating external validation for "in-sample" data with cross-validation
+
+18.6.4 Approximating external validation for "in-sample" data with information criteria: AIC, DIC, WAIC, and LOO-IC
+
+18.7 Model averaging
+
+18.8 Regularization: penalization, shrinkage, ridge and lasso
+
+18.9 Summary and outlook
+
+
+# 19. General hierarchical models: Site-occupancy species distribution model (SDM)
+
+19.1 Introduction
+
+19.2 Data generation
+
+19.3 Likelihood analysis with canned functions in the R package unmarked
+
+19.4 Bayesian analysis with JAGS
+
+19.5 Bayesian analysis with Stan
+
+19.6 Bayesian analysis with canned functions in the R package ubms
+
+19.7 Do-it-yourself MLEs
+
+19.8 Likelihood analysis with TMB
+
+19.9 Comparison of the engines
+
+19.10 Summary and outlook
+
+
+# 20. Integrated models
+
+20.1 Introduction
+
+20.2 Data generation: Simulating three abundance data sets with different observation/aggregation models
+
+20.3 Fitting models to the three individual data sets first
+
+20.3.1 Fitting a standard Poisson GLM in R and JAGS to data set 1
+
+20.3.2 Fitting the zero-truncated Poisson GLM in R and JAGS to data set 2
+
+20.3.3 Fitting the cloglog Bernoulli GLM in R and JAGS to data set 3
+
+20.4 Fitting the integrated model to all three data sets simultaneously
+
+20.4.1 Fitting the integrated model with a Do-it-yourself likelihood function
+
+20.4.2 Fitting the integrated model with JAGS
+
+20.4.3 Fitting the integrated model with NIMBLE
+
+20.4.4 Fitting the integrated model with Stan
+
+20.4.5 Fitting the integrated model with TMB
+
+20.4.6 Comparison of the parameter estimates for the integrated model
+
+20.5 What do we gain by analysing the joint likelihood in our analysis?
+
+20.6 Summary and outlook
+
+
+# 21. Conclusion
+
+21.1 Looking back
+
+21.2 Looking ahead
+
+21.2.1 Study design
+
+21.2.2 Do-it-yourself MCMC
+
+21.2.2 Machine learning
+
+21.2.4 Hierarchical models

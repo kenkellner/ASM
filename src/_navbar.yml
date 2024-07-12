@@ -1,0 +1,13 @@
+left:
+  - text: "Home"
+    href: index.html
+  - text: "TOC"
+    href: toc.html
+  - text: "Authors"
+    href: authors.html
+  - text: "Code"
+    href: code.html
+  - text: "Errata"
+    href: errata.html
+  - text: "Chapter 19B"
+    href: chapter19B.html
