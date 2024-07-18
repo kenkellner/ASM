@@ -11,27 +11,27 @@ code_files <- list.files('code', pattern='*.R$')
 
 chaps <- sapply(strsplit(code_files, "_"), function(x) x[3])
 chaps <- gsub(".R", "", chaps, fixed=TRUE)
-chaps <- as.integer(chaps)
+#chaps <- as.integer(chaps)
 titles <- paste("Chapter", chaps, "Code")
 filenames <- gsub(".R", ".html", code_files, fixed=TRUE)
 
-setwd('code')
-for (i in 1:length(code_files)){
-  rmarkdown::render("code_page_template.Rmd",
-                    params = list(page_title = titles[i], code_file = code_files[i]),
-                    output_file = filenames[i], quiet=TRUE)
-}
+#setwd('code')
+#for (i in 1:length(code_files)){
+ # rmarkdown::render("code_page_template.Rmd",
+ #                   params = list(page_title = titles[i], code_file = code_files[i]),
+ #                   output_file = filenames[i], quiet=TRUE)
+#}
 ```
 
 <br>
 
 ```{r, echo=FALSE}
 chap_names <- paste("Chapter", chaps)
-chap_num <- sprintf("%02d", chaps)
-view_urls <- paste0("<a href=code/ASM_Chapter_", chap_num, ".html>View code</a>")
+chap_num <- sprintf("%02s", chaps)
+#view_urls <- paste0("<a href=code/ASM_Chapter_", chap_num, ".html>View code</a>")
 download_urls <- paste0("<a href=code/ASM_Chapter_", chap_num, ".R>Download code</a>")
 
 
-tab <- data.frame(Chapter = chap_names, View = view_urls, Code = download_urls)
+tab <- data.frame(Chapter = chap_names, Code = download_urls)
 knitr::kable(tab, col.names=NULL)
 ```

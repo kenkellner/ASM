@@ -14,7 +14,7 @@ Buy the book from [Elsevier](https://shop.elsevier.com/books/applied-statistical
 
 # Description
 
-<img src="9780443137150.jpg" style="float: right; padding-left: 10px; padding-right: 10 px;" width="300"/>
+<img src="cover.png" style="float: right; margin-left: 10px; margin-right: 10 px; border: 1px solid #000000;" width="300"/>
 
 Applied Statistical Modelling for Ecologists: A Practical Guide to Bayesian and Likelihood Inference Using R, JAGS/Nimble, Stan and TMB provides an important guide and comparison of powerful new software packages that are now widely used in research publications, including JAGS, Stan, Nimble, and TMB. It provides a gentle introduction to the most exciting specialist software that is often used to conduct cutting-edge research, along with Bayesian statistics and frequentist statistics with its maximum likelihood estimation method. In addition, this book is simple and accessible, allowing researchers to carry out and understand statistical modeling.
 

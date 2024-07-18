@@ -3,7 +3,7 @@ BUILD=build
 
 RMD_IN = $(wildcard $(SRC)/*.Rmd)
 RMD_OUT := $(patsubst $(SRC)/%.Rmd,$(BUILD)/%.html,$(RMD_IN))
-CODE_IN = $(wildcard $(SRC)/code/*.R)
+CODE_IN = $(wildcard $(SRC)/code/ASM*.R)
 
 all: $(RMD_OUT)
 	@mkdir -p build
@@ -11,9 +11,14 @@ all: $(RMD_OUT)
 	@Rscript build_Rmd.R $(SRC)/index.Rmd $(BUILD)/index.html > /dev/null 2>&1
 	@echo "Done"
 
-code: $(CODE_IN) $(SRC)/code/code_page_template.Rmd
+code: $(CODE_IN) $(SRC)/code/code_page_template.Rmd $(SRC)/code.Rmd
+	Rscript -e 'rmarkdown::render("src/code.Rmd")'
 	@mkdir -p $(BUILD)/code
-	@cp $(SRC)/code/*.html $(BUILD)/code/
+	@cp $(SRC)/code/*.R $(BUILD)/code/
+	#@mv $(SRC)/code.html $(BUILD)
+
+chapter19B:
+	cp $(SRC)/Chapter_19B.pdf $(BUILD)/Chapter_19B.pdf
 
 deploy:
 	@rsync -r --progress --delete --update build/ \
