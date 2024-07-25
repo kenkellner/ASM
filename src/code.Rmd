@@ -28,9 +28,10 @@ filenames <- gsub(".R", ".html", code_files, fixed=TRUE)
 ```{r, echo=FALSE}
 chap_names <- paste("Chapter", chaps)
 chap_num <- sprintf("%02s", chaps)
+chap_names <- c("All code", chap_names)
 #view_urls <- paste0("<a href=code/ASM_Chapter_", chap_num, ".html>View code</a>")
 download_urls <- paste0("<a href=code/ASM_Chapter_", chap_num, ".R>Download code</a>")
-
+download_urls <- c("<a href=code/ASM_code.zip>Download code</a>", download_urls)
 
 tab <- data.frame(Chapter = chap_names, Code = download_urls)
 knitr::kable(tab, col.names=NULL)

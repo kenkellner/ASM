@@ -15,7 +15,9 @@ code: $(CODE_IN) $(SRC)/code/code_page_template.Rmd $(SRC)/code.Rmd
 	Rscript -e 'rmarkdown::render("src/code.Rmd")'
 	@mkdir -p $(BUILD)/code
 	@cp $(SRC)/code/*.R $(BUILD)/code/
-	#@mv $(SRC)/code.html $(BUILD)
+	@cd $(SRC); zip -r ASM_code.zip code/*.R
+	@mv $(SRC)/ASM_code.zip $(BUILD)/code
+	@mv $(SRC)/code.html $(BUILD)
 
 chapter19B:
 	cp $(SRC)/Chapter_19B.pdf $(BUILD)/Chapter_19B.pdf
