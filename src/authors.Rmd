@@ -13,6 +13,6 @@ Dr. Kéry works as a senior scientist at the Swiss Ornithological Institute, Sem
 
 # Ken Kellner
 
-<img src="avatar1.jpg" style="float: right; padding: 10px;" width="200"/>
+<img src="ken.jpg" style="float: right; padding: 10px;" width="200"/>
 
 Dr. Kellner is an Assistant Research Professor at Michigan State University, MI, USA. Prior to his current position, he completed a Ph.D. in forest ecology at Purdue University in Indiana, USA, and a postdoc at West Virginia University. Ken's research has covered a wide range of topics including forest management, plant demography, and avian and mammal conservation. He has published this research in more than 40 peer reviewed publications. In addition, Ken is particularly focused on the development of open-source software tools for ecological modeling. He has developed or contributed to several software packages that are widely used by ecologists and featured in several books, including the successful R packages jagsUI, unmarked, and ubms.
